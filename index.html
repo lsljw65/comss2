@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>컴퓨터활용능력 2급 안내</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6faf7;--sheet:#fff;--ink:#16291e;--sub:#4a5d52;--line:#cfdcd3;--green:#1b6b43;--green-t:#e1f1e7;--hi:#ffe9a6;--blue:#23529e;--ok:#17703f;--no:#b3261e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a14;--sheet:#17251d;--ink:#e8f1ea;--sub:#a5b8ab;--line:#2f4538;--green:#6fcf9b;--green-t:#1d3326;--hi:#5b4a12;--blue:#8db4f5;--ok:#6fcf9b;--no:#ff9b93;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1a14;--sheet:#17251d;--ink:#e8f1ea;--sub:#a5b8ab;--line:#2f4538;--green:#6fcf9b;--green-t:#1d3326;--hi:#5b4a12;--blue:#8db4f5;--ok:#6fcf9b;--no:#ff9b93;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 "Noto Sans KR",system-ui,sans-serif;word-break:keep-all}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--sheet);border-bottom:2px solid var(--green)}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;padding:0 12px}
+nav a{flex:none;padding:12px 14px;color:var(--ink);text-decoration:none;font-weight:500;font-size:16px}
+nav a:hover,nav a:focus-visible{background:var(--green-t);outline:none}
+a:focus-visible,summary:focus-visible,input:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+/* hero as a sheet */
+.hero{padding:44px 0 32px}
+h1{font-size:clamp(34px,7vw,60px);line-height:1.15;margin:0 0 14px;font-weight:900;letter-spacing:-.02em}
+.lead{max-width:34em;color:var(--sub);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);background:var(--sheet)}
+.cell{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 16px}
+.cell small{display:block;color:var(--sub);font-size:15px}
+.cell b{font-size:24px;font-weight:700}
+.cell.hi{background:var(--hi)}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,4.5vw,34px);margin:0 0 6px;font-weight:700}
+h3{font-size:21px;margin:22px 0 4px}
+p{margin:.5em 0}
+.note{color:var(--sub);font-size:16px}
+.tbl{overflow-x:auto;margin-top:16px}
+table{border-collapse:collapse;width:100%;min-width:560px;background:var(--sheet)}
+th,td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top}
+th{background:var(--green-t);font-weight:700}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:16px}
+.box{background:var(--sheet);border:1px solid var(--line);border-left:6px solid var(--green);padding:6px 20px 16px}
+ul{padding-left:1.2em;margin:.4em 0}
+li{margin:.25em 0}
+ol.plan{list-style:none;padding:0;margin:16px 0 0;counter-reset:w}
+ol.plan li{counter-increment:w;display:grid;grid-template-columns:78px 1fr;gap:0;background:var(--sheet);border:1px solid var(--line);margin:-1px 0 0}
+ol.plan li::before{content:counter(w) "주차";background:var(--green);color:var(--sheet);font-weight:700;padding:14px 8px;text-align:center}
+ol.plan li div{padding:12px 16px}
+[data-theme="dark"] ol.plan li::before{color:#0f1a14}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) ol.plan li::before{color:#0f1a14}}
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}.vid{background:var(--sheet);border:1px solid var(--line);display:flex;flex-direction:column}.vid .scr{background:var(--green-t);border-bottom:1px solid var(--line);padding:28px 16px;text-align:center;font-weight:700;color:var(--green)}.vid .bd{padding:12px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}.vid .bd b{font-size:19px}.vid .bd span{color:var(--sub);font-size:16px;flex:1}.vid .go{align-self:flex-start;padding:10px 18px;background:var(--green);color:var(--sheet);font-weight:700;text-decoration:none}.vid .wait{align-self:flex-start;padding:10px 18px;border:2px dashed var(--line);color:var(--sub);font-size:16px}[data-theme="dark"] .vid .go{color:#0f1a14}@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .vid .go{color:#0f1a14}}
+.calc{background:var(--sheet);border:1px solid var(--line);padding:20px;margin-top:16px;display:grid;gap:14px;max-width:520px}
+.calc label{display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:500}
+input[type=number]{width:110px;font:inherit;padding:8px 10px;border:2px solid var(--line);background:var(--bg);color:var(--ink);text-align:right}
+#res{padding:14px 16px;font-weight:700;background:var(--green-t);min-height:56px}
+#res.ok{color:var(--ok)} #res.no{color:var(--no)}
+details{background:var(--sheet);border:1px solid var(--line);margin-top:-1px;padding:0 18px}
+summary{cursor:pointer;padding:14px 0;font-weight:700}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+details p{padding-bottom:8px}
+.cta{display:inline-block;margin-top:14px;padding:12px 22px;background:var(--green);color:var(--sheet);font-weight:700;text-decoration:none}
+[data-theme="dark"] .cta{color:#0f1a14}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cta{color:#0f1a14}}
+.lesson{background:var(--green-t);border:2px solid var(--green);padding:8px 24px 24px}.lesson .cta{font-size:20px;padding:14px 28px}.lesson .wait2{display:inline-block;margin-top:14px;padding:12px 22px;border:2px dashed var(--green);color:var(--sub)}
+footer{padding:28px 0 40px;border-top:2px solid var(--green);color:var(--sub);font-size:15px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav aria-label="바로가기"><div class="wrap">
+<a href="#exam">시험 구성</a><a href="#pass">합격 기준</a><a href="#study">공부 범위</a><a href="#video">기초 동영상</a><a href="#plan">4주 계획</a><a href="#calc">점수 확인</a><a href="#apply">접수·무료 학습</a><a href="#faq">자주 묻는 질문</a><a href="#lesson">1:1 강의</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+<h1>컴퓨터활용능력 2급<br>시험 안내</h1>
+<p class="lead">사무에서 가장 많이 쓰는 엑셀과 컴퓨터 기본 지식을 평가하는 국가공인 자격증입니다. 시험 구성, 합격 기준, 공부 순서를 한 페이지에 모았습니다.</p>
+<div class="grid" role="list">
+<div class="cell" role="listitem"><small>주관</small><b>대한상공회의소</b></div>
+<div class="cell" role="listitem"><small>필기</small><b>2과목 · 40문항</b></div>
+<div class="cell" role="listitem"><small>실기</small><b>엑셀 · 40분</b></div>
+<div class="cell hi" role="listitem"><small>합격 점수</small><b>필기 평균 60 · 실기 70</b></div>
+</div>
+</div></header>
+
+<main class="wrap">
+<section id="exam">
+<h2>시험 구성</h2>
+<p>필기와 실기를 모두 통과해야 자격증이 나옵니다. 필기에 합격하면 일정 기간 안에 실기를 볼 수 있습니다.</p>
+<div class="tbl"><table>
+<tr><th></th><th>필기</th><th>실기</th></tr>
+<tr><th>과목</th><td>1. 컴퓨터 일반<br>2. 스프레드시트 일반</td><td>스프레드시트 실무 (엑셀 작업)</td></tr>
+<tr><th>문항</th><td>과목당 20문항, 총 40문항 (객관식)</td><td>컴퓨터로 직접 엑셀 작업</td></tr>
+<tr><th>시간</th><td>60분</td><td>40분</td></tr>
+<tr><th>방식</th><td>컴퓨터로 보는 CBT</td><td>상시 시험 (시험장 컴퓨터 사용)</td></tr>
+</table></div>
+<p class="note">시험 방식과 시간은 개정될 수 있으니 접수 전에 대한상공회의소 공고를 꼭 확인하세요.</p>
+</section>
+
+<section id="pass">
+<h2>합격 기준</h2>
+<div class="two">
+<div class="box"><h3>필기</h3><ul><li>두 과목 평균 <b>60점 이상</b></li><li>한 과목이라도 <b>40점 미만</b>이면 불합격</li></ul></div>
+<div class="box"><h3>실기</h3><ul><li><b>70점 이상</b>이면 합격</li><li>엑셀을 직접 조작하는 작업형</li></ul></div>
+</div>
+<p class="note">필기 합격 효력은 합격일부터 2년간 유지되는 것으로 알려져 있습니다. 정확한 기간은 공식 사이트에서 확인하세요.</p>
+</section>
+
+<section id="study">
+<h2>무엇을 공부하나</h2>
+<h3>필기 1과목 · 컴퓨터 일반</h3>
+<ul><li>컴퓨터 시스템의 구성(하드웨어, 소프트웨어)</li><li>윈도우 사용법과 설정</li><li>인터넷, 네트워크, 정보 보안</li><li>그 밖의 최신 정보기술 용어</li></ul>
+<h3>필기 2과목 · 스프레드시트 일반</h3>
+<ul><li>엑셀의 기본 화면과 데이터 입력, 서식</li><li>수식과 함수(합계, 조건, 찾기 등)</li><li>데이터 관리: 정렬, 필터, 부분합, 피벗 테이블</li><li>차트 만들기</li></ul>
+<h3>실기 · 스프레드시트 실무</h3>
+<div class="tbl"><table style="min-width:480px">
+<tr><th>작업</th><th>내용</th></tr>
+<tr><td>기본 작업</td><td>데이터 입력, 서식, 조건부 서식, 페이지 설정</td></tr>
+<tr><td>계산 작업</td><td>함수를 이용한 수식 계산</td></tr>
+<tr><td>분석 작업</td><td>정렬·필터·부분합·피벗 테이블 등 데이터 분석</td></tr>
+<tr><td>기타 작업</td><td>차트 작성, 매크로 등</td></tr>
+</table></div>
+</section>
+
+<section id="video">
+<h2>엑셀 기초 동영상</h2>
+<p>엑셀이 처음인 분은 아래 순서대로 영상을 먼저 보세요. 각 카드의 버튼을 누르면 새 창에서 영상이 열립니다.</p>
+<div class="vids" id="vids"></div>
+</section>
+
+<section id="plan">
+<h2>4주 공부 계획</h2>
+<p>처음 준비하는 분도 하루 1~2시간씩 4주면 충분히 해볼 만한 분량입니다. 필기와 실기를 겹쳐서 공부하면 효율이 좋습니다.</p>
+<ol class="plan">
+<li><div><b>컴퓨터 일반 이론</b><br>핵심 요약서를 한 번 읽고, 기출문제로 용어에 익숙해집니다.</div></li>
+<li><div><b>엑셀 기본기와 함수</b><br>함수를 직접 입력해 보며 익힙니다. 이 내용은 필기 2과목과 실기에 모두 쓰입니다.</div></li>
+<li><div><b>기출문제 반복</b><br>필기 기출을 시간 재고 풀고, 틀린 문제를 모아 다시 봅니다. 필기 시험에 응시합니다.</div></li>
+<li><div><b>실기 모의고사</b><br>40분 안에 풀어 보는 연습을 합니다. 작업 순서와 시간 배분을 몸에 익힙니다.</div></li>
+</ol>
+</section>
+
+<section id="calc">
+<h2>필기 점수 확인</h2>
+<p>모의고사 점수를 넣으면 필기 합격 기준을 계산해 줍니다.</p>
+<div class="calc">
+<label for="s1">컴퓨터 일반 (0~100)<input id="s1" type="number" min="0" max="100" inputmode="numeric"></label>
+<label for="s2">스프레드시트 일반 (0~100)<input id="s2" type="number" min="0" max="100" inputmode="numeric"></label>
+<div id="res" role="status" aria-live="polite">두 과목 점수를 입력해 보세요.</div>
+</div>
+</section>
+
+<section id="apply">
+<h2>접수와 무료 학습</h2>
+<div class="two">
+<div class="box"><h3>시험 접수</h3><p>대한상공회의소 자격평가사업단 사이트에서 회원가입 후 접수합니다. 상시 시험이라 지역과 시험장마다 날짜가 다르고, 응시료도 공식 사이트에서 확인해야 정확합니다.</p><a class="cta" href="https://license.korcham.net" target="_blank" rel="noopener">대한상공회의소 자격평가사업단 열기</a></div>
+<div class="box"><h3>무료로 공부하는 방법</h3><ul><li>서울시·경기도 평생학습포털의 무료 인터넷 강의</li><li>출판사 도서를 사면 제공되는 무료 동영상 강의와 온라인 CBT 문제집</li><li>내일배움카드로 학원 수강(고용24에서 신청)</li></ul></div>
+</div>
+</section>
+
+<section id="faq">
+<h2>자주 묻는 질문</h2>
+<details open><summary>컴퓨터를 잘 못 써도 도전할 수 있나요?</summary><p>2급은 사무 초보자도 준비할 수 있는 난이도로 알려져 있습니다. 마우스와 키보드 사용이 서툴러도 기출문제를 반복하면 익숙해집니다.</p></details>
+<details><summary>1급을 꼭 따야 하나요?</summary><p>1급이 반드시 필요한 경우가 아니라면 2급만으로도 충분하다는 의견이 많습니다. 목적(취업, 승진, 업무)에 맞게 정하세요.</p></details>
+<details><summary>필기와 실기를 동시에 공부해도 되나요?</summary><p>네. 엑셀 함수와 데이터 관리는 두 시험에 겹치는 내용이라 같이 공부하면 시간을 아낄 수 있습니다.</p></details>
+<details><summary>출제기준이 바뀐다고 들었어요.</summary><p>2027년부터 필기 출제기준이 바뀐다는 학원 안내가 있습니다. 필기에서 ‘멀티미디어 활용’이 빠지고 ‘인공지능(AI) 기초 활용’이 추가되며, 실기는 변경이 없다고 합니다. 정확한 적용 시점은 대한상공회의소 공고로 확인하세요.</p></details>
+<details><summary>어떤 교재를 사야 하나요?</summary><p>해마다 개정되는 최신판 필기·실기 교재를 고르세요. 무료 동영상 강의와 CBT 문제집이 함께 제공되는 책이 많습니다. 어떤 책이든 기출문제를 반복해서 푸는 것이 가장 중요합니다.</p></details>
+</section>
+<section id="lesson">
+<h2>1:1 강의가 필요하신가요?</h2>
+<div class="lesson">
+<h3>혼자 공부하기 막막한 분께</h3>
+<ul><li>엑셀이 처음이라 어디서부터 시작해야 할지 모르겠는 분</li><li>독학하다가 함수나 실기 작업에서 막힌 분</li><li>내 속도에 맞춰 천천히 배우고 싶은 분</li></ul>
+<p>숨고에서 1:1 강의를 신청하거나 문의할 수 있습니다. 강의 내용, 일정, 가격은 숨고 프로필에서 확인하세요.</p>
+<div id="soomgo"></div>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap">이 페이지는 일반적인 안내용입니다. 시험 일정, 응시료, 출제기준은 바뀔 수 있으니 접수 전에 반드시 대한상공회의소 공식 사이트에서 확인하세요.</div></footer>
+
+<script>
+(function(){
+var a=document.getElementById('s1'),b=document.getElementById('s2'),r=document.getElementById('res');
+function upd(){
+if(a.value===''||b.value===''){r.className='';r.textContent='두 과목 점수를 입력해 보세요.';return}
+var x=+a.value,y=+b.value,avg=(x+y)/2;
+if(x<0||y<0||x>100||y>100){r.className='no';r.textContent='점수는 0에서 100 사이로 입력하세요.';return}
+if(x<40||y<40){r.className='no';r.textContent='불합격: 한 과목이 40점 미만입니다. 평균 '+avg+'점.';}
+else if(avg>=60){r.className='ok';r.textContent='합격 기준 충족: 평균 '+avg+'점, 두 과목 모두 40점 이상입니다.';}
+else{r.className='no';r.textContent='불합격: 평균 '+avg+'점으로 60점에 못 미칩니다.';}
+}
+var V=[
+{t:'1. 엑셀 화면 알아보기',d:'리본 메뉴, 셀, 시트, 수식 입력줄의 이름과 역할',u:''},
+{t:'2. 데이터 입력과 수정',d:'글자·숫자 입력, 자동 채우기, 복사와 이동',u:''},
+{t:'3. 셀 서식 꾸미기',d:'글꼴, 테두리, 표시 형식, 조건부 서식 기초',u:''},
+{t:'4. 수식과 함수 첫걸음',d:'합계, 평균, 개수 등 가장 많이 쓰는 함수',u:''},
+{t:'5. 정렬·필터·차트',d:'데이터를 정리하고 그래프로 보여 주는 방법',u:''}
+];
+var vb=document.getElementById('vids');
+V.forEach(function(v){
+var c=document.createElement('div');c.className='vid';
+var s=document.createElement('div');s.className='scr';s.textContent='동영상';
+var bd=document.createElement('div');bd.className='bd';
+var t=document.createElement('b');t.textContent=v.t;
+var d=document.createElement('span');d.textContent=v.d;
+bd.appendChild(t);bd.appendChild(d);
+if(v.u){var l=document.createElement('a');l.className='go';l.href=v.u;l.target='_blank';l.rel='noopener';l.textContent='동영상 보기';bd.appendChild(l);}
+else{var w=document.createElement('div');w.className='wait';w.textContent='영상 링크 등록 예정';bd.appendChild(w);}
+c.appendChild(s);c.appendChild(bd);vb.appendChild(c);
+});
+var SOOMGO_URL='';
+var sg=document.getElementById('soomgo');
+if(SOOMGO_URL){var k=document.createElement('a');k.className='cta';k.href=SOOMGO_URL;k.target='_blank';k.rel='noopener';k.textContent='숨고에서 1:1 강의 문의하기';sg.appendChild(k);}
+else{var q=document.createElement('span');q.className='wait2';q.textContent='숨고 프로필 링크 등록 예정';sg.appendChild(q);}
+a.addEventListener('input',upd);b.addEventListener('input',upd);
+})();
+</script>
+</body>
+</html>
